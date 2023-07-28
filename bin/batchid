@@ -1,0 +1,5 @@
+#!/bin/bash
+
+id="$(gdate +%Y%m%d_%H%M%S)" 
+echo "$id" | pbcopy
+echo "$id"
