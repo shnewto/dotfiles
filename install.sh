@@ -10,7 +10,7 @@ mkdir -p "$HOME/cli"
 git clone https://github.com/shnewto/space.git "$HOME/cli/space"
 
 # rust 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # ripgrep
 cargo install ripgrep
