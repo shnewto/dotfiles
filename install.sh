@@ -11,7 +11,7 @@ git clone https://github.com/shnewto/space.git "$HOME/cli/space"
 
 # rust 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 
 # ripgrep
 cargo install ripgrep
@@ -25,6 +25,11 @@ git clone https://github.com/zsh-users/zsh-history-substring-search "$HOME/cli/z
 # sdkman
 curl -s "https://get.sdkman.io" | bash
 
-``
+# elm
+curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz
+gunzip elm.gz
+chmod +x elm
+sudo mv elm /usr/local/bin/
+
 # elm-land
 npm install -g elm-land@latest
