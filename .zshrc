@@ -13,7 +13,6 @@ compinit -i
 
 fpath=($HOME/.zsh $fpath)
 
-alias date="gdate"
 
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=100000000000

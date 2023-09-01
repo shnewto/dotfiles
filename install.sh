@@ -1,13 +1,14 @@
 #!/bin/sh
 
 cat .zshrc >> "$HOME/.zshrc"
+
+
+printf "\n%s\n" "alias pbcopy='xclip -selection clipboard'" >> "$HOME/.zshrc"
+printf "\n%s\n" "alias pbpaste='xclip -selection clipboard -o'" >> "$HOME/.zshrc"
 cat .p10k.zsh > $HOME/.p10k.zsh
 
 cp -a bin "$HOME/bin"
-mkdir -p "$HOME/cli"
-
-# space
-git clone https://github.com/shnewto/space.git "$HOME/cli/space"
+cp -a cli "$HOME/cli"
 
 # rust 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
