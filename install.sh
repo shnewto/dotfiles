@@ -10,6 +10,7 @@ cat .p10k.zsh > $HOME/.p10k.zsh
 cp -a bin "$HOME/bin"
 cp -a cli "$HOME/cli"
 
+git clone https://github.com/romkatv/powerlevel10k.git "$HOME/cli/powerlevel10k"
 # rust 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 . "$HOME/.cargo/env"
