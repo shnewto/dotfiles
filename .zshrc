@@ -32,7 +32,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 
 source "$HOME/cli/powerlevel10k/powerlevel9k.zsh-theme"
 
-export PATH="$PATH:$HOME/bin:$HOME/cli/space/bin:$HOME/.local/bin"
+export PATH="$PATH:$HOME/bin:$HOME/cli/space/bin:$HOME/.local/bin:$HOME/Library/Python/3.11/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -58,12 +58,6 @@ move_to_drawer() {
 alias td=move_to_drawer
 alias ll='ls -lah'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/cli/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/cli/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/cli/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/cli/google-cloud-sdk/completion.zsh.inc"; fi
-
 
 # brew install zsh-history-substring-search
 source "$HOME/cli/zsh-history-substring-search/zsh-history-substring-search.zsh"
@@ -73,3 +67,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/private/tmp/google-cloud-sdk/path.zsh.inc' ]; then . '/private/tmp/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/private/tmp/google-cloud-sdk/completion.zsh.inc' ]; then . '/private/tmp/google-cloud-sdk/completion.zsh.inc'; fi
